@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  height: 120vh;
+  position: relative;
+}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsla(302, 43%, 48%, 0.587); }
+     h1 {
+      font-size:5vh;
+      color: hsl(234, 12%, 34%);
+     }
+    .heading1 {
+       font-weight: 200;
+       font-style: normal;
+    }
+    .heading2 {
+      font-weight: 700;
+    }
+    .hero-p{
+      font-weight: 500;
+      font-size: 1rem;
+      color: hsl(234, 12%, 34%);
+    }
+    .hero-text {
+      text-align: center;
+      width: 35%;
+      padding: 1.5rem;
+      
+    }
+    .hero {
+      display: flex;
+      justify-content: center;
+      padding:1rem;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 250px);
+      grid-template-rows: auto auto;  
+      /* border: 1px blue; */
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    .container span{
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .container p{
+      font-weight: 100;
+      font-size: 01rem;
+    }
+    img {
+      width: 10vh;
+    }
+    .parent1, .parent2, .parent3, .parent4 {
+      box-shadow: -1px 5px 10px 0px rgba(0, 85, 255, 0.197);
+    }
+     
+    .parent1 {
+     background-color: rgb(255, 255, 255);
+     width:auto;
+     border-top: 0.2rem solid hsl(180, 62%, 55%);
+     height: 185px;
+     grid-column: 1;
+     grid-row: 1/3;
+     align-self: center;
+    }
+    .parent2 {
+     background-color:rgb(255, 255, 255);
+     width: auto;
+     border-top: 0.2rem solid hsl(0, 78%, 62%);}
+     .parent3 {
+     background-color: rgb(255, 255, 255);
+     width: auto;
+     border-top: 0.2rem solid hsl(34, 97%, 64%);
+    grid-column: 3;
+    grid-row: 1/3;
+    align-self: center;
+}
+    
+     .parent4 {
+     background-color: rgb(255, 255, 255);
+     width: auto;
+     border-top: 0.2rem solid hsl(212, 86%, 64%);
+      grid-column: 2;
+
+    }
+   .child {
+    width: calc(100% - 10%);
+    height:100%;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin:0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex: 1;
+    max-width: 300px;
+   }
+   .child-text {
+    margin: 0;
+   }
+    
+  img {
+    width: 3rem;
+    align-self: flex-end;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  @media screen and (max-width:425px) {
+    .container{
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; /* or 100vh for full screen */
+  }
+    .hero-text {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+    
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-text">
+    <h1>
+      <span class="heading1">Reliable, efficient delivery <br></span>
+      <span class="heading2">Powered by Technology</span>
+    </h1>
+
+    <p class="hero-p">Our Artificial Intelligence powered tools use millions of project data points 
+    to ensure that your project is successful</p>
+  </div>
+  </div>
+  <div class="container">
+    <div class="parent1">
+      <div class="child">
+        <div class="child-text">
+          <span>Supervisor</span><br>
+           <p>Monitors activity to identify project roadblocks</p>
+        </div>
+         <img src="icon-supervisor.svg"> 
+      </div>
+    </div>
+    <div class="parent2">
+      <div class="child">
+        <div class="child-text"> 
+          <span>Team Builder</span><br>
+           <p>Scans our talent network to create the optimal team for your project</p>
+        </div>
+       <img src="icon-team-builder.svg">
+      </div>
+    </div>
+     <div class="parent3">
+      <div class="child">
+        <div class="child-text">
+          <span >Calculator</span><br>
+          <p>Uses data from past projects to provide better delivery estimates</p></div>
+         <img src="icon-calculator.svg">
+      </div>
+     </div>
+    <div class="parent4">
+      <div class="child">
+        <div class="child-text">
+           <span >Karma</span><br>
+           <p>Regularly evaluates our talent to ensure quality</p>
+        </div>
+        <img src="icon-karma.svg">
+      </div>
+    </div>
+        
+      </div>
+    </div>   
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Sara</a>.
+    </p>
+  </footer>
+</body>
+</html>
